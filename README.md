@@ -16,6 +16,20 @@
 
 ---
 
+## Explore the Project
+
+[Overview](#short-description) · [Architecture](#architecture) · [Setup](#how-to-setup) · [Results](tests/final_test_results.md) · [Presentation](#final-presentation) · [Poster](#project-poster)
+
+### Project Highlights
+
+- Transmits text wirelessly using visible light instead of radio waves
+- Encodes characters as 8-bit ASCII and modulates them through an LED
+- Reconstructs received data using a solar panel and Arduino Uno
+- Displays decoded messages on a 16×2 I2C LCD
+- Includes source code, wiring guidance, test results, presentations, and posters
+
+---
+
 ## Short Description
 
 This project demonstrates a working **Li-Fi (Light Fidelity)** prototype built with two Arduino Uno boards. The transmitter converts text entered in the Serial Monitor into 8-bit ASCII binary and drives an LED — ON for `1`, OFF for `0`. The receiver reads incoming light intensity through a solar panel, applies a calibrated threshold to classify each bit, reconstructs the ASCII character, and displays it on a 16×2 I2C LCD. The system successfully transmits short text messages such as `A`, `HI`, `HELLO`, and `IOT` under controlled indoor conditions at a range of 1–2 cm.
@@ -97,6 +111,19 @@ LCD display + Serial Monitor output
 ### System Architecture Diagram
 
 ![System Architecture](docs/architecture/final_system_architecture.png)
+
+---
+
+## Repository Structure
+
+```text
+LiFi-Based-Transmission/
+├── src/          Arduino transmitter and receiver sketches
+├── docs/         Architecture, hardware, testing, and presentations
+├── tests/        Experiment procedures and final results
+├── media/        Circuit photographs and project posters
+└── README.md     Project overview and setup guide
+```
 
 ---
 
@@ -191,7 +218,15 @@ Downloads: [A3 PDF](media/posters/LiFi_Poster_A3.pdf) · [A1 PDF](media/posters/
 
 | Member | Contribution |
 |---|---|
-| Jeel Sidpara | Testing, hardware prototype, project documentation and GitLab work items |
-| Aatman Sabhaya | Transmitter and receiver circuit assembly, testing support, Arduino uno enviornment Setup |
+| [Jeel Sidpara](https://github.com/jeelsidpara2811) | Testing, hardware prototype, project documentation, and GitLab work items |
+| [Aatman Sabhaya](https://github.com/Aatmanium) | Transmitter and receiver circuit assembly, testing support, and Arduino Uno environment setup |
 
 *FWPM Internet of Things — TH Rosenheim, SoSe 2026*
+
+---
+
+<div align="center">
+
+Designed, built, and documented by [Jeel Sidpara](https://github.com/jeelsidpara2811) and [Aatman Sabhaya](https://github.com/Aatmanium).
+
+</div>
