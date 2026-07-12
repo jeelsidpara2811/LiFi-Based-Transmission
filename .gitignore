@@ -1,0 +1,13 @@
+# Arduino / editor files
+*.tmp
+*.bak
+.vscode/
+.DS_Store
+Thumbs.db
+.codex/
+
+# Build/output folders
+build/
+dist/
+
+# Large media can be added manually if needed
