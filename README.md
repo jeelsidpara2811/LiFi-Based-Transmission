@@ -18,7 +18,7 @@
 
 ## Explore the Project
 
-[Overview](#short-description) · [Architecture](#architecture) · [Setup](#how-to-setup) · [Results](tests/final_test_results.md) · [Presentation](#final-presentation) · [Poster](#project-poster)
+[Overview](#overview) · [Architecture](#architecture) · [Build Guide](#build-guide) · [Results](#results) · [Documentation](#documentation) · [Team](#team)
 
 ### Project Highlights
 
@@ -30,7 +30,7 @@
 
 ---
 
-## Short Description
+## Overview
 
 This project demonstrates a working **Li-Fi (Light Fidelity)** prototype built with two Arduino Uno boards. The transmitter converts text entered in the Serial Monitor into 8-bit ASCII binary and drives an LED — ON for `1`, OFF for `0`. The receiver reads incoming light intensity through a solar panel, applies a calibrated threshold to classify each bit, reconstructs the ASCII character, and displays it on a 16×2 I2C LCD. The system successfully transmits short text messages such as `A`, `HI`, `HELLO`, and `IOT` under controlled indoor conditions at a range of 1–2 cm.
 
@@ -51,9 +51,9 @@ Full motivation document: [docs/motivation_and_problem.md](docs/motivation_and_p
 
 ---
 
-## MVP / Boundary Definition
+## Capabilities and Limitations
 
-### What this prototype CAN do
+### Capabilities
 
 | Capability | Detail |
 |---|---|
@@ -62,7 +62,7 @@ Full motivation document: [docs/motivation_and_problem.md](docs/motivation_and_p
 | LCD display output | Shows decoded messages on a 16×2 I2C LCD (up to 32 characters) |
 | Serial Monitor I/O | Transmitter reads input; receiver confirms output |
 
-### What this prototype CANNOT do
+### Current limitations
 
 | Limitation | Reason |
 |---|---|
@@ -127,7 +127,7 @@ LiFi-Based-Transmission/
 
 ---
 
-## How to Setup
+## Build Guide
 
 ### Requirements
 
@@ -165,11 +165,17 @@ LiFi-Based-Transmission/
 4. Place LED directly in front of solar panel at **1–2 cm**
 5. Type a message (e.g. `HI`) in Serial Monitor → press Enter → observe LCD on receiver
 
-### Circuit Photos
+## Results
+
+The prototype reliably distinguished LED-OFF readings near `350` from LED-ON readings near `600` using a calibrated threshold of `500`. Under controlled indoor lighting and direct alignment, it successfully transmitted short messages at approximately five bits per second over a distance of 1–2 cm.
+
+See the [complete test results](tests/final_test_results.md) and [range, alignment, and ambient-light analysis](tests/range_alignment_ambient_light.md) for the recorded observations and constraints.
+
+### Prototype Gallery
 
 | Full Setup | Transmitter | Receiver | LCD Output |
 |---|---|---|---|
-| ![](media/circuit_photos/full_setup.jpeg) | ![](media/circuit_photos/transmitter_circuit.jpeg) | ![](media/circuit_photos/receiver_circuit.jpeg) | ![](media/circuit_photos/lcd_output.jpeg) |
+| ![Complete Li-Fi prototype](media/circuit_photos/full_setup.jpeg) | ![LED transmitter circuit](media/circuit_photos/transmitter_circuit.jpeg) | ![Solar-panel receiver circuit](media/circuit_photos/receiver_circuit.jpeg) | ![Decoded message on LCD](media/circuit_photos/lcd_output.jpeg) |
 
 ![Serial Monitor](media/circuit_photos/serial_monitor_message_input.png)
 
@@ -193,13 +199,18 @@ Full document: [docs/business_model.md](docs/business_model.md)
 ---
 
 
-## Final Presentation
+## Documentation
 
-The final presentation (20 min + Q&A) is available here:
+The repository includes the supporting engineering documentation and project deliverables:
 
-[docs/presentations/Final_presentation_IoT_group4_LiFi.pdf](docs/presentations/Final_presentation_IoT_group4_LiFi.pdf)
+- [System architecture](docs/architecture/)
+- [Hardware setup and calibration](docs/hardware/)
+- [Testing procedures](docs/testing/)
+- [Troubleshooting and lessons learned](docs/troubleshooting/)
+- [Project presentation](docs/presentations/Final_presentation_IoT_group4_LiFi.pdf)
+- [Project poster](media/posters/LiFi_Poster_A3.pdf)
 
-Earlier milestone presentations:
+Development milestone presentations are retained for project traceability:
 
 - [IoT_interim_presentation_1_group4_LiFi.pdf](docs/presentations/IoT_interim_presentation_1_group4_LiFi.pdf) — M1
 - [IoT_interim_presentation_2_group4_LiFi.pdf](docs/presentations/IoT_interim_presentation_2_group4_LiFi.pdf) — M2
@@ -218,10 +229,20 @@ Downloads: [A3 PDF](media/posters/LiFi_Poster_A3.pdf) · [A1 PDF](media/posters/
 
 | Member | Contribution |
 |---|---|
-| [Jeel Sidpara](https://github.com/jeelsidpara2811) | Testing, hardware prototype, project documentation, and GitLab work items |
+| [Jeel Sidpara](https://github.com/jeelsidpara2811) | Testing, hardware prototyping, project documentation, and project coordination |
 | [Aatman Sabhaya](https://github.com/Aatmanium) | Transmitter and receiver circuit assembly, testing support, and Arduino Uno environment setup |
 
 *FWPM Internet of Things — TH Rosenheim, SoSe 2026*
+
+## Contributing
+
+Suggestions and improvements are welcome. Please read [CONTRIBUTING.md](CONTRIBUTING.md) before opening an issue or submitting a pull request.
+
+## Academic Context and Usage
+
+This repository documents an academic prototype and is provided for learning and portfolio purposes. It is not a production-ready communication system or a safety-certified medical solution. If you build on this work, cite the repository and follow your institution's academic-integrity rules.
+
+No open-source license has been granted yet. Unless a license is added, the contributors retain all rights to the source code, documentation, and media.
 
 ---
 
