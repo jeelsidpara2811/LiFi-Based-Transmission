@@ -41,7 +41,7 @@ This project demonstrates a working **Li-Fi (Light Fidelity)** prototype built w
 Traditional wireless technologies (Wi-Fi, Bluetooth, cellular) rely on RF signals. RF has well-known limitations in specific environments:
 
 - **Spectrum congestion** — limited RF bandwidth in dense deployments
-- **Security risk** — RF signals pass through walls and can be intercepted
+- **Security risks** — RF signals pass through walls and can be intercepted
 - **RF-restricted zones** — hospitals, aircraft, and industrial facilities prohibit RF near sensitive equipment
 - **Interference** — multiple devices on shared bands degrade performance
 
@@ -225,7 +225,7 @@ Downloads: [A3 PDF](media/posters/LiFi_Poster_A3.pdf) · [A1 PDF](media/posters/
 
 ---
 
-## Team
+## Team members
 
 | Member | Contribution |
 |---|---|
